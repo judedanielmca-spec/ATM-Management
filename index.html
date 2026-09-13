@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBI ATM | Login</title>
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="glass-card">
+            <div style="font-size: 3rem; color: var(--accent); margin-bottom: 1rem;">
+                <i class="ph ph-bank"></i>
+            </div>
+            <h1>State Bank Of India</h1>
+            <p class="subtitle">Secure ATM Services</p>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="accountNumber">Card / Account Number</label>
+                    <input type="text" id="accountNumber" class="input-field" placeholder="Enter your 10-digit account number" autocomplete="off" maxlength="10">
+                    <div class="error-message" id="accountError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="pin">4-Digit PIN</label>
+                    <input type="password" id="pin" class="input-field" placeholder="Enter your PIN" autocomplete="off" maxlength="4">
+                    <div class="error-message" id="pinError"></div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    <i class="ph ph-sign-in"></i> Access Account
+                </button>
+            </form>
+            
+            <div style="margin-top: 1.5rem; font-size: 0.8rem; color: var(--text-muted);">
+                <p>Demo Credentials:</p>
+                <p>Account: 1234567890 | PIN: 1234</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/auth.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBI ATM | Fund Transfer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="top-nav">
+            <a href="dashboard.html" class="back-btn">
+                <i class="ph ph-arrow-left"></i> Back to Dashboard
+            </a>
+        </div>
+        
+        <div class="glass-card">
+            <h2>Fund Transfer</h2>
+            <p class="subtitle">Securely transfer funds to another account</p>
+            
+            <form id="transferForm">
+                <div class="form-group">
+                    <label for="transferAccount">Beneficiary Account Number</label>
+                    <input type="text" id="transferAccount" class="input-field" placeholder="10-digit account number" maxlength="10" required autocomplete="off">
+                </div>
+                
+                <div class="form-group">
+                    <label for="transferAmount">Transfer Amount (₹)</label>
+                    <input type="number" id="transferAmount" class="input-field" placeholder="Enter amount" min="1" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    <i class="ph ph-paper-plane-right"></i> Transfer Funds
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="toast"></div>
+
+    <!-- Scripts -->
+    <script src="js/auth.js"></script>
+    <script src="js/transactions.js"></script>
+</body>
+</html>

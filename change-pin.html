@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBI ATM | Change PIN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="top-nav">
+            <a href="dashboard.html" class="back-btn">
+                <i class="ph ph-arrow-left"></i> Back to Dashboard
+            </a>
+        </div>
+        
+        <div class="glass-card">
+            <h2>Change PIN</h2>
+            <p class="subtitle">Update your 4-digit security PIN</p>
+            
+            <form id="pinForm">
+                <div class="form-group">
+                    <label for="currentPin">Current PIN</label>
+                    <input type="password" id="currentPin" class="input-field" placeholder="Enter current PIN" maxlength="4" required autocomplete="off">
+                </div>
+                
+                <div class="form-group">
+                    <label for="newPin">New PIN</label>
+                    <input type="password" id="newPin" class="input-field" placeholder="Enter new 4-digit PIN" maxlength="4" required autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPin">Confirm New PIN</label>
+                    <input type="password" id="confirmPin" class="input-field" placeholder="Re-enter new PIN" maxlength="4" required autocomplete="off">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Update PIN</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="toast"></div>
+
+    <!-- Scripts -->
+    <script src="js/auth.js"></script>
+    <script src="js/transactions.js"></script>
+    <script>
+        // Restrict pin inputs to numbers
+        document.querySelectorAll('input[type="password"]').forEach(input => {
+            input.addEventListener('input', (e) => {
+                e.target.value = e.target.value.replace(/[^0-9]/g, '');
+            });
+        });
+    </script>
+</body>
+</html>

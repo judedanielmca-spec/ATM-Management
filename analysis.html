@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Bank Of India | Analytics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .stat-card {
+            background: rgba(2, 12, 27, 0.4);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .stat-card h3 { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+        .stat-card p { font-size: 1.5rem; font-weight: 700; }
+        .text-green { color: var(--success); }
+        .text-red { color: var(--error); }
+        
+        .chart-container {
+            position: relative;
+            height: 250px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" style="max-width: 800px;">
+        <div class="top-nav">
+            <a href="dashboard.html" class="back-btn">
+                <i class="ph ph-arrow-left"></i> Back to Dashboard
+            </a>
+        </div>
+        
+        <div class="glass-card large">
+            <h2>Transaction Analytics</h2>
+            <p class="subtitle">Insights into your recent spending and deposits</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Deposits (Last 30 Days)</h3>
+                    <p class="text-green" id="totalDeposits">₹0.00</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Spent (Withdrawals + Transfers)</h3>
+                    <p class="text-red" id="totalSpent">₹0.00</p>
+                </div>
+            </div>
+
+            <div style="background: rgba(2, 12, 27, 0.4); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem;">
+                <h3 style="font-size: 1rem; color: var(--text-muted); margin-bottom: 1rem;">Income vs Expense Breakdown</h3>
+                <div class="chart-container">
+                    <canvas id="analyticsChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/auth.js"></script>
+    <script src="js/transactions.js"></script>
+</body>
+</html>

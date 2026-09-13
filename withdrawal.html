@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBI ATM | Withdrawal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="top-nav">
+            <a href="dashboard.html" class="back-btn">
+                <i class="ph ph-arrow-left"></i> Back to Dashboard
+            </a>
+        </div>
+        
+        <div class="glass-card">
+            <h2>Cash Withdrawal</h2>
+            <p class="subtitle">Select or enter the amount to withdraw</p>
+            
+            <div class="quick-amounts">
+                <button type="button" class="btn-outline quick-btn" data-amount="500">₹500</button>
+                <button type="button" class="btn-outline quick-btn" data-amount="1000">₹1,000</button>
+                <button type="button" class="btn-outline quick-btn" data-amount="2000">₹2,000</button>
+                <button type="button" class="btn-outline quick-btn" data-amount="5000">₹5,000</button>
+            </div>
+
+            <form id="withdrawalForm">
+                <div class="form-group">
+                    <label for="amount">Other Amount (Multiples of ₹100)</label>
+                    <input type="number" id="amount" class="input-field" placeholder="Enter amount" min="100" step="100" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Withdraw Cash</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="toast"></div>
+
+    <!-- Scripts -->
+    <script src="js/auth.js"></script>
+    <script src="js/transactions.js"></script>
+</body>
+</html>

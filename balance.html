@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBI ATM | Balance Enquiry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="top-nav">
+            <a href="dashboard.html" class="back-btn">
+                <i class="ph ph-arrow-left"></i> Back to Dashboard
+            </a>
+        </div>
+        
+        <div class="glass-card">
+            <h2>Balance Enquiry</h2>
+            <p class="subtitle">Your current account balance</p>
+            
+            <div class="balance-card" style="text-align: center; margin-bottom: 0;">
+                <div class="balance-label">Available Balance</div>
+                <div class="balance-amount" id="balanceDisplay" style="margin-bottom: 0; font-size: 3rem;">₹0.00</div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/auth.js"></script>
+    <script src="js/transactions.js"></script>
+</body>
+</html>
